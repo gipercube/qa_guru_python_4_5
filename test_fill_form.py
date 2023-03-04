@@ -17,7 +17,7 @@ def test_fill_form(open_browser_for_form):
     browser.element('.react-datepicker__day--018').should(have.text('18')).click()
     browser.element('#subjectsInput').should(be.blank).type('Arts').press_enter()
     browser.element('[for="hobbies-checkbox-2"]').should(have.text('Reading')).click()
-    browser.element('#uploadPicture').send_keys(os.getcwd() + f'/resources/1.png')
+    browser.element('#uploadPicture').send_keys(os.getcwd() + '/resources/1.png')
     browser.element('#currentAddress').should(be.blank).type('Address')
     browser.element('#state').click()
     browser.element('#react-select-3-option-0').should(have.text('NCR')).click()
