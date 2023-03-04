@@ -28,7 +28,8 @@ def test_fill_form(open_browser_for_form):
     # Assertions
     browser.element('#example-modal-sizes-title-lg').should(have.text('Thanks for submitting the form'))
     browser.all('tr').element_by_its('td', have.text('Student Name')).all('td')[1].should(have.text('yashaka selene'))
-    browser.all('tr').element_by_its('td', have.text('Student Email')).all('td')[1].should(have.text('yashaka@selene.com'))
+    browser.all('tr').element_by_its('td', have.text('Student Email')).all('td')[1].should(have.text(
+        'yashaka@selene.com'))
     browser.all('tr').element_by_its('td', have.text('Gender')).all('td')[1].should(have.text('Male'))
     browser.all('tr').element_by_its('td', have.text('Mobile')).all('td')[1].should(have.text('9876543210'))
     browser.all('tr').element_by_its('td', have.text('Date of Birth')).all('td')[1].should(have.text('18 April,2001'))
