@@ -1,7 +1,7 @@
 import os
 
 from selene.support.shared import browser
-from selene import be, have
+from selene import be, have, command
 
 
 def test_fill_form(open_browser_for_form):
@@ -23,7 +23,7 @@ def test_fill_form(open_browser_for_form):
     browser.element('#react-select-3-option-0').should(have.text('NCR')).click()
     browser.element('#city').click()
     browser.element('#react-select-4-option-0').should(have.text('Delhi')).click()
-    browser.element('#submit').click()
+    browser.element('#submit').perform(command.js.click)
 
     # Assertions
     browser.element('#example-modal-sizes-title-lg').should(have.text('Thanks for submitting the form'))
